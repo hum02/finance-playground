@@ -4,14 +4,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -29,9 +27,10 @@ public class OAuthClient {
 
     @Value("${openbanking.clientSecret}")
     String clientSecret;
+
     private static RestClient restClient = RestClient.builder().build();
 
-    public String getAccessToken(String code) {
+    public TokenResponse getAccessToken(String code) {
         String url = "https://testapi.openbanking.or.kr/oauth/2.0/token";
 
         // 요청 본문 데이터
@@ -52,7 +51,7 @@ public class OAuthClient {
                 .uri(URI.create(url))
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE)
                 .body(formEncodedBody)
-                .retrieve().body(String.class);
+                .retrieve().body(TokenResponse.class);
     }
 
     public String getAuthUri() {
@@ -64,7 +63,7 @@ public class OAuthClient {
                         "&scope=login inquiry transfer" +
                         "&state=%s" +
                         "&auth_type=0",
-                clientId, redirectUri, state
+                clientId, "http://localhost:8080/openbank", state
         );
     }
 }

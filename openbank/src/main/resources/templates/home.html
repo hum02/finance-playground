@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<h2>Welcome</h2>
+<form th:action="@{/login}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <!-- Hidden field to include accessToken in the form submission -->
+    <input type="hidden" id="accessToken" name="accessToken" th:value="${accessToken}">
+    <p th:text="'Access Token: ' + ${accessToken}"></p>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
