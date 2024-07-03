@@ -1,5 +1,6 @@
-package com.openbank.web;
+package com.openbank;
 
+import com.openbank.web.TokenResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -63,7 +64,7 @@ public class OAuthClient {
                         "&scope=login inquiry transfer" +
                         "&state=%s" +
                         "&auth_type=0",
-                clientId, "http://localhost:8080/openbank", state
+                clientId, redirectUri, state
         );
     }
 }

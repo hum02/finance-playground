@@ -13,6 +13,8 @@
     <!-- Hidden field to include accessToken in the form submission -->
     <input type="hidden" id="accessToken" name="accessToken" th:value="${accessToken}">
     <p th:text="'Access Token: ' + ${accessToken}"></p>
+    <input type="hidden" id="userSeqNo" name="userSeqNo" th:value="${userSeqNo}">
+    <p th:text="'userSeqNumber: ' + ${userSeqNo}"></p>
     <button type="submit">Login</button>
 </form>
 </body>
