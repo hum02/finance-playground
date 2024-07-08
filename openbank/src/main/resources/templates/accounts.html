@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account List</title>
+</head>
+<body>
+<h1>Account List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Account Alias</th>
+        <th>Bank Name</th>
+        <th>Account Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="account : ${accountList}">
+        <td th:text="${account.account_alias}">Account Alias</td>
+        <td th:text="${account.bank_name}">Bank Name</td>
+        <td th:text="${account.account_num_masked}">Account Number</td>
+        <td>
+            <a th:href="@{'/account/' + ${account.bank_code_std} + ${account.bank_code_sub} + ${account.account_seq}}">상세보기</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
