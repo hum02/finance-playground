@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<h2>계좌 정보</h2>
+<input type="hidden" id="balance" name="balance" th:value="${balance}">
+<p th:text="'잔액: ' + ${balance}"></p>
+</body>
+</html>

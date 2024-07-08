@@ -18,6 +18,9 @@
         <td th:text="${account.account_alias}">Account Alias</td>
         <td th:text="${account.bank_name}">Bank Name</td>
         <td th:text="${account.account_num_masked}">Account Number</td>
+        <td>
+            <a th:href="@{'/account/' + ${account.bank_code_std} + ${account.bank_code_sub} + ${account.account_seq}}">상세보기</a>
+        </td>
     </tr>
     </tbody>
 </table>
