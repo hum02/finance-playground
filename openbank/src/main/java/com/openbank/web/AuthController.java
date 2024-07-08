@@ -1,6 +1,7 @@
 package com.openbank.web;
 
 import com.openbank.OAuthClient;
+import com.openbank.web.dto.TokenResponse;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;

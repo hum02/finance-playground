@@ -1,6 +1,7 @@
 package com.openbank.web;
 
 import com.openbank.OpenBankingClient;
+import com.openbank.web.dto.UserInfoResponse;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,7 @@ public class AccountController {
         model.addAttribute("accountList", userInformation.res_list());
         return "accounts";
     }
-    
+
     private static Cookie getCookie(String name, HttpServletRequest httpServletRequest) {
         return stream(httpServletRequest.getCookies())
                 .filter(c -> c.getName().equals(name))

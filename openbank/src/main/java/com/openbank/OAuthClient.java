@@ -1,6 +1,6 @@
 package com.openbank;
 
-import com.openbank.web.TokenResponse;
+import com.openbank.web.dto.TokenResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

@@ -1,4 +1,4 @@
-package com.openbank.web;
+package com.openbank.web.dto;
 
 import java.util.List;
 

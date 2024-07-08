@@ -1,7 +1,7 @@
 package com.openbank;
 
-import com.openbank.web.TokenResponse;
-import com.openbank.web.UserInfoResponse;
+import com.openbank.web.dto.TokenResponse;
+import com.openbank.web.dto.UserInfoResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;

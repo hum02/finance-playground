@@ -1,4 +1,4 @@
-package com.openbank.web;
+package com.openbank.web.dto;
 
 public record AccountResponse(
         String fintech_use_num,
