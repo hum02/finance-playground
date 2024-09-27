@@ -11,7 +11,6 @@
 
 <img width="204" alt="image" src="https://github.com/hum02/finance-playground/assets/96762301/90571325-1d41-41bd-8933-da34b1c48470">
 <img width="204" alt="image" src="https://github.com/hum02/finance-playground/assets/96762301/c55ffc44-1e73-4a6b-b4c3-abc50ce2b84d">
-<img width="204" alt="image" src="https://github.com/hum02/finance-playground/assets/96762301/bcacd6ce-5dd4-4e69-8048-2d0c0f94dcd5">
 
 **->**
 
